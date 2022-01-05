@@ -1,0 +1,56 @@
+body, html {
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box{
+    width: 200px;
+    padding: 40px;
+    background: rgb(221, 221, 221);
+    text-align: center;
+}
+
+.form-title{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;
+}
+
+.form-box input[type="text"], .form-box input[type="password"], .form-box input[type="submit"], .form-box input[type="email"]{
+    border: 0;
+    margin: 10px auto;
+    padding: 14px 10px;
+    text-align: center;
+    border: 1px black;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus, .form-box input[type="password"]:focus{
+    width: 220px;
+    border-color: gray;
+}
+
+.form-box input[type="button"]{
+    border: 0;
+    background: gray;
+}

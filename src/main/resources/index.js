@@ -1,6 +1,6 @@
 var btnAcceder = document.getElementById("Accesar")
 btnAcceder.addEventListener("click", function() {
-    axios.post("https://servidorfalso.herokuapp.com/Usuario", {
+    axios.get("https://servidorfalso.herokuapp.com/Usuario", {
         nombre : document.getElementById("nombre").value,
         contraseña : document.getElementById("contraseña").value,
     }).then(function(){  

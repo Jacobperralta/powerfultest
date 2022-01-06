@@ -1,6 +1,6 @@
 var btnRegistrarse = document.getElementById('registrarse')
 btnRegistrarse.addEventListener('click', function () {
-    axios.post("https://servidorfalso.herokuapp.com/Usuario", {
+    axios.get("https://servidorfalso.herokuapp.com/Usuario", {
         nombre : document.getElementById("nombre").value,
         matricula : document.getElementById("matricula").value,
         correo : document.getElementById("correo").value,

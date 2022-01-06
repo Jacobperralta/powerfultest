@@ -2,8 +2,12 @@ package mx.uv.powerfultest;
 
 import static spark.Spark.*;
 
+import mx.uv.powerfultest.database.*;
+import com.google.gson.*;
+
 public class App
 {
+    private static Gson gson = new Gson();
     public static void main( String[] args )
     {
         System.out.println("Hello World");
@@ -29,6 +33,28 @@ public class App
         get("/", (req, res) -> {
             res.redirect("index.html");
             return null;
+        });
+
+        post("/Usuario", (req, res) -> {
+            String payload = req.body();
+            Usuario u = gson.fromJson(payload, Usuario.class);
+
+            DAO dao = new DAO();
+            JsonObject objetoJson = new JsonObject();
+            objetoJson.addProperty("status", dao.crearUsuario(u));
+            return objetoJson;
+        });
+
+        post("/Usuario", (req, res) -> {
+            String payload = req.body();
+            Usuario u = gson.fromJson(payload, Usuario.class);
+            String nombre = u.getNombre();
+            String contraseña = u.getContraseña();
+
+            DAO dao = new DAO();
+            JsonObject objetoJson = new JsonObject();
+            dao.validarUsuario(nombre, contraseña);
+            return objetoJson;
         });
     }
 

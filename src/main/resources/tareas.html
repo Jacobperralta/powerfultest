@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Tareas</title>
+
     <link rel="stylesheet" href="./stylestareas.css">
 </head>
 <body>
     <form action="tareas.html" class="form-box" id="form">
-        <h1>Tarea a registrar</h1>
-        <textarea id="tarea" name="tarea" placeholder="Ingrese la tarea aqui"></textarea>
-        <button type="submit" id="volver" class="btn btn-info">
-            subir tarea
-        </button>
+        <h1>Lista de tareas</h1>
+        <div class="search">
+        <input type="text" placeholder="Agregar tarea"></input>
+        <button class="btn-add">+</button>
+        </div>
+        <div class="li-container">
+            <ul>
+
+            </ul>
+        </div class="empty">
+            <p>No tienes tareas pendientes</p>
         <button type="button" onclick="index()" id="volver" class="btn btn-info">
             Volver
         </button>

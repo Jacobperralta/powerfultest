@@ -1,18 +1,21 @@
 package mx.uv.powerfultest.database;
 
+
+
 public class Usuario {
     private String nombre;
     private String matricula;
     private String contraseña;
     private String correo;
-    private String tarea;
 
-    public Usuario(String nombre, String matricula, String contraseña, String correo, String tarea){
+    public Usuario(){
+    }
+
+    public Usuario(String nombre, String matricula, String contraseña, String correo){
         this.setNombre(nombre);
         this.setMatricula(matricula);
         this.setContraseña(contraseña);
         this.setCorreo(correo);
-        this.setTarea(tarea);
     }
 
     public String getNombre(){
@@ -45,13 +48,5 @@ public class Usuario {
 
     public void setCorreo(String correo){
         this.correo = correo;
-    }
-
-    public String getTarea(){
-        return tarea;
-    }
-
-    public void setTarea(String tarea){
-        this.tarea = tarea;
     }
 }
